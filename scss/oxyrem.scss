@@ -1,0 +1,213 @@
+/**
+ *	Oxyrem.css v1.0
+ * 	@author:	Patrick Reid - @IAmReliQ
+ * 	@link:		www.reliqarts.com
+ *	(c) ReliQ Arts 2014
+ */
+
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+
+// Import custom pre-modules
+@import 
+	"modules/variables",
+	"modules/variables",
+	"modules/support";
+
+// Include all of Ionic
+@import "../www/lib/ionic/scss/ionic";
+
+
+ion-view {
+	
+	img {
+		max-width: 100%;
+	}
+
+	p {
+		&.empty, &.no-results {
+			color: #555;
+			padding: 10px;
+			text-align: center;
+		}
+	}
+
+	// Vitals classes
+	.hr, .heart-rate {
+		color: #FE494F;
+	}
+
+	.bp, .blood-pressure {
+		color: #C34545;
+	}
+
+	.temp {
+		color: #288BB5;
+	}
+
+	.resp, .rr {
+		color: #50C091;
+	}
+
+	.gl, .sugar {
+		color: #E4A74C;
+	}
+	// -- Vitals Classes
+
+	ion-content {
+		.list {
+			color: #333;
+			.item {
+				color: #444;
+			}
+			.item-divider {
+				background: #61D8A2;
+				border-color: #61D8A2;
+				color: #fff;
+			}
+
+			&.vitals {
+				.item {
+					.icon {
+						color: #d7d7d7;
+
+						&.danger {
+							color: #ae0000;
+						}
+					} 
+				}
+			}
+		}
+	}
+
+	&#login {
+		background: #FCFDFE;
+	
+		#login-button {}
+		#web-button {
+			color: #666;
+			font-size: .98em;
+
+			&:before {
+				margin-right: 10px;
+			}
+		}
+
+		#copy {
+			color: #777;
+			font-size: .8em;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		#tagline {
+			color: #666;
+			padding: 10px 0;
+		}
+
+		.login-head {
+			margin-top: 18px;
+			padding: 10px;
+
+			img {
+				display: block;
+				margin: 25px auto 0;
+				max-width: 75%;
+			}
+		}
+
+		.login-inputs {
+			padding: 10px;
+		}	
+
+		.login-buttons {
+			padding: 10px;
+		}
+	}
+}
+
+
+#oxy-nav-drawer {
+
+	> .content {
+		background: #01516C; //#9EB0B6;
+		top: 0 !important;
+
+		.list {
+
+			.item {
+				background: transparent;
+				border-color: rgba(#fff, .8);
+
+				&[class*="icon"] {
+					background: rgba(248, 248, 248, 0.93);
+
+					a {
+						background: transparent;
+
+						&:active{
+							color: $positive;
+						}
+					}
+
+					&:hover, &:active {
+						background: rgba(248, 248, 248, 1);
+						color: #2BA6CF;
+					}
+				}
+
+				&.util {
+					font-size: .9em;
+					background: rgba(213, 228, 236, 0.86);
+
+					a {
+						background: transparent;
+
+						&:active{
+							color: $positive;
+						}
+					}
+
+					&:hover, &:active {
+						background: rgba(248, 248, 248, 1);
+						color: #DD6060;
+					}
+				}
+			}
+		}
+
+		.drawer-head {
+			background: gray url(../img/blued-sea.png) no-repeat center / cover;
+			width: 100%;
+			height: 200px;
+			position: relative;
+
+			.user-info {
+				background: rgba(darken($positive, 15%), .5);
+				bottom: 0;
+				color: #fff;
+				width: 100%;
+				position: absolute;
+
+				.name {
+					font-size: 1.1rem;
+					font-style: italic;
+					font-weight: bold;
+					padding: 5px 10px 0;
+				}
+				.email {
+					font-size: .9rem;
+					padding: 0 10px 5px;
+				}
+			}
+		}
+	}
+}
+
+.loading-container .loading {
+	position: relative;
+}
+

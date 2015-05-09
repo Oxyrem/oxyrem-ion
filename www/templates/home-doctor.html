@@ -1,0 +1,21 @@
+<ion-view title="My Doctors">
+    <ion-content class="has-header padding">
+        <div ng-repeat="doctor in data.doctors" class="list list-inset">
+            <div class="item item-text-wrap item-icon-left">
+                <i class="icon fa fa-user-md"></i>
+                <h2>{{ doctor.title }} {{ doctor.first_name }} {{ doctor.last_name }}</h2>
+                <p>Since: {{ doctor.pivot.updated_at | amDateFormat:'dddd, MMMM Do YYYY' }}</p>
+            </div>
+            <div ng-if="doctor.phone" class="item item-icon-left" href="#">
+                <i class="icon fa fa-phone"></i>
+                {{ doctor.phone }}
+            </div>
+            <div ng-if="doctor.email" class="item item-icon-left" href="#">
+                <i class="icon fa fa-envelope-o"></i>
+                {{ doctor.email }}
+            </div>
+        </div>
+
+        <p ng-show="!data.doctors.length" class="empty no-results">You have no doctors at this time.</p>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view view-title="Login" id="login" hide-nav-bar="true">
+<ion-content>
+	<div class="login-head">
+		<img id="logo" src="img/logo-primary.png" alt="Oxyrem" />
+		<p class="text-center" id="tagline">For patients, and doctors!</p>
+	</div>
+	<div class="list list-inset login-inputs">
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Email</span>
+			<input type="email" placeholder="Email" ng-model="data.email">
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Password</span>
+			<input type="password" placeholder="Password" ng-model="data.password">
+		</label>
+	</div>
+	<div class="list list-inset login-buttons">
+		<button class="button button-block button-positive" id="login-button" ng-click="login()">Login</button>
+		<a class="button button-block button-light icon ion-android-globe" href="#" onclick="window.open('http://oxyrem.reliqarts.com', '_system', 'location=yes'); return false;" id="web-button">Visit Web</a>
+	</div>
+</ion-content>
+<div class="bar bar-footer bar-light height-auto">
+	<p id="copy" class="text-center">&copy; Oxyrem 2015</p>
+</div>
+</ion-view>
